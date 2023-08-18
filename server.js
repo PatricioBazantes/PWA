@@ -7,7 +7,7 @@ app.use(express.static('public'));
 
 // Manejar todas las rutas para redirigir al archivo index.html (para que funcione con rutas de la PWA)
 app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + 'index.html');
 });
 
 // Iniciar el servidor
@@ -16,5 +16,5 @@ app.listen(port, () => {
 });
 
 app.get('/service-worker.js', (req, res) => {
-    res.sendFile(__dirname + '/public/service-worker.js');
+    res.sendFile(__dirname + 'service-worker.js');
 });
